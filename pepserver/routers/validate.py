@@ -14,7 +14,7 @@ from jsonschema.exceptions import ValidationError
 from peppy import Project
 
 # helpers
-from ..utils import TEST_SCHEMA
+from ..const import TEST_SCHEMA
 
 # router setup
 router = APIRouter()
