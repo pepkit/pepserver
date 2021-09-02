@@ -1,7 +1,5 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
-COPY ./pepserver /app/app
+FROM tiangolo/uvicorn-gunicorn:python3.7-alpine3.8
+LABEL authors="Nathan LeRoy, Michal Stolarczyk, Nathan Sheffield"
 
-# dependencies
-COPY requirements.txt /
-RUN pip install  pip
-RUN pip install -r /requirements.txt
+COPY . /app
+RUN pip install .
